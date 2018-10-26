@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481144DD2157A8CF00BF56EF /* yukichi.png in Resources */ = {isa = PBXBuildFile; fileRef = 481144DC2157A8CF00BF56EF /* yukichi.png */; };
+		481144DF2157A98A00BF56EF /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481144DE2157A98A00BF56EF /* firstViewController.swift */; };
+		481144E12157BCAD00BF56EF /* en.png in Resources */ = {isa = PBXBuildFile; fileRef = 481144E02157BCAD00BF56EF /* en.png */; };
+		481144E32157C1E300BF56EF /* yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 481144E22157C1E200BF56EF /* yajirushi.png */; };
+		481144E72157CD0700BF56EF /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 481144E62157CD0700BF56EF /* camera.png */; };
+		481144EB2157D3F100BF56EF /* uzura.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 481144EA2157D3EF00BF56EF /* uzura.ttf */; };
+		481144EF215872CC00BF56EF /* yukichi3.png in Resources */ = {isa = PBXBuildFile; fileRef = 481144EE215872CC00BF56EF /* yukichi3.png */; };
+		481144F1215888A800BF56EF /* maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 481144F0215888A800BF56EF /* maru.png */; };
+		481144F421588F6600BF56EF /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481144F221588F6600BF56EF /* ListTableViewCell.swift */; };
+		481144F521588F6600BF56EF /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 481144F321588F6600BF56EF /* ListTableViewCell.xib */; };
 		48A130582156077700FB5296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A130572156077700FB5296 /* AppDelegate.swift */; };
-		48A1305A2156077700FB5296 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A130592156077700FB5296 /* ViewController.swift */; };
+		48A1305A2156077700FB5296 /* hemkyakuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A130592156077700FB5296 /* hemkyakuViewController.swift */; };
 		48A1305D2156077700FB5296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A1305B2156077700FB5296 /* Main.storyboard */; };
 		48A1305F2156077B00FB5296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48A1305E2156077B00FB5296 /* Assets.xcassets */; };
 		48A130622156077B00FB5296 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A130602156077B00FB5296 /* LaunchScreen.storyboard */; };
 		48A1306D2156077B00FB5296 /* moneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A1306C2156077B00FB5296 /* moneyTests.swift */; };
 		48A130782156077B00FB5296 /* moneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A130772156077B00FB5296 /* moneyUITests.swift */; };
+		48A1308621560CC100FB5296 /* nyuryokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A1308521560CC100FB5296 /* nyuryokuViewController.swift */; };
+		48A1308821560CD700FB5296 /* keiyakushoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A1308721560CD700FB5296 /* keiyakushoViewController.swift */; };
+		48A130922156285600FB5296 /* itiranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A130912156285600FB5296 /* itiranViewController.swift */; };
+		48A1309421571FB500FB5296 /* keiyakusho.png in Resources */ = {isa = PBXBuildFile; fileRef = 48A1309321571FB500FB5296 /* keiyakusho.png */; };
+		48E919AE2157388D0012EC29 /* endmiku.png in Resources */ = {isa = PBXBuildFile; fileRef = 48E919AD2157388C0012EC29 /* endmiku.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +49,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		481144DC2157A8CF00BF56EF /* yukichi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yukichi.png; sourceTree = "<group>"; };
+		481144DE2157A98A00BF56EF /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
+		481144E02157BCAD00BF56EF /* en.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en.png; sourceTree = "<group>"; };
+		481144E22157C1E200BF56EF /* yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yajirushi.png; sourceTree = "<group>"; };
+		481144E62157CD0700BF56EF /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		481144EA2157D3EF00BF56EF /* uzura.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = uzura.ttf; sourceTree = "<group>"; };
+		481144EE215872CC00BF56EF /* yukichi3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yukichi3.png; sourceTree = "<group>"; };
+		481144F0215888A800BF56EF /* maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maru.png; sourceTree = "<group>"; };
+		481144F221588F6600BF56EF /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		481144F321588F6600BF56EF /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		48A130542156077600FB5296 /* money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = money.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A130572156077700FB5296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48A130592156077700FB5296 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48A130592156077700FB5296 /* hemkyakuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hemkyakuViewController.swift; sourceTree = "<group>"; };
 		48A1305C2156077700FB5296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48A1305E2156077B00FB5296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48A130612156077B00FB5296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +72,11 @@
 		48A130732156077B00FB5296 /* moneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A130772156077B00FB5296 /* moneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyUITests.swift; sourceTree = "<group>"; };
 		48A130792156077B00FB5296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48A1308521560CC100FB5296 /* nyuryokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nyuryokuViewController.swift; sourceTree = "<group>"; };
+		48A1308721560CD700FB5296 /* keiyakushoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keiyakushoViewController.swift; sourceTree = "<group>"; };
+		48A130912156285600FB5296 /* itiranViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itiranViewController.swift; sourceTree = "<group>"; };
+		48A1309321571FB500FB5296 /* keiyakusho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keiyakusho.png; sourceTree = "<group>"; };
+		48E919AD2157388C0012EC29 /* endmiku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endmiku.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +127,27 @@
 		48A130562156077600FB5296 /* money */ = {
 			isa = PBXGroup;
 			children = (
+				481144F0215888A800BF56EF /* maru.png */,
+				481144EE215872CC00BF56EF /* yukichi3.png */,
+				481144EA2157D3EF00BF56EF /* uzura.ttf */,
+				481144E62157CD0700BF56EF /* camera.png */,
+				481144E22157C1E200BF56EF /* yajirushi.png */,
+				481144E02157BCAD00BF56EF /* en.png */,
+				481144DC2157A8CF00BF56EF /* yukichi.png */,
+				48E919AD2157388C0012EC29 /* endmiku.png */,
+				48A1309321571FB500FB5296 /* keiyakusho.png */,
 				48A130572156077700FB5296 /* AppDelegate.swift */,
-				48A130592156077700FB5296 /* ViewController.swift */,
 				48A1305B2156077700FB5296 /* Main.storyboard */,
 				48A1305E2156077B00FB5296 /* Assets.xcassets */,
 				48A130602156077B00FB5296 /* LaunchScreen.storyboard */,
 				48A130632156077B00FB5296 /* Info.plist */,
+				481144DE2157A98A00BF56EF /* firstViewController.swift */,
+				48A130912156285600FB5296 /* itiranViewController.swift */,
+				48A1308521560CC100FB5296 /* nyuryokuViewController.swift */,
+				48A1308721560CD700FB5296 /* keiyakushoViewController.swift */,
+				48A130592156077700FB5296 /* hemkyakuViewController.swift */,
+				481144F221588F6600BF56EF /* ListTableViewCell.swift */,
+				481144F321588F6600BF56EF /* ListTableViewCell.xib */,
 			);
 			path = money;
 			sourceTree = "<group>";
@@ -229,9 +274,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481144E32157C1E300BF56EF /* yajirushi.png in Resources */,
+				481144EB2157D3F100BF56EF /* uzura.ttf in Resources */,
 				48A130622156077B00FB5296 /* LaunchScreen.storyboard in Resources */,
+				481144F521588F6600BF56EF /* ListTableViewCell.xib in Resources */,
+				48E919AE2157388D0012EC29 /* endmiku.png in Resources */,
+				48A1309421571FB500FB5296 /* keiyakusho.png in Resources */,
+				481144DD2157A8CF00BF56EF /* yukichi.png in Resources */,
 				48A1305F2156077B00FB5296 /* Assets.xcassets in Resources */,
 				48A1305D2156077700FB5296 /* Main.storyboard in Resources */,
+				481144F1215888A800BF56EF /* maru.png in Resources */,
+				481144E12157BCAD00BF56EF /* en.png in Resources */,
+				481144E72157CD0700BF56EF /* camera.png in Resources */,
+				481144EF215872CC00BF56EF /* yukichi3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48A1305A2156077700FB5296 /* ViewController.swift in Sources */,
+				481144F421588F6600BF56EF /* ListTableViewCell.swift in Sources */,
+				48A1308621560CC100FB5296 /* nyuryokuViewController.swift in Sources */,
+				48A1308821560CD700FB5296 /* keiyakushoViewController.swift in Sources */,
+				48A130922156285600FB5296 /* itiranViewController.swift in Sources */,
+				48A1305A2156077700FB5296 /* hemkyakuViewController.swift in Sources */,
 				48A130582156077700FB5296 /* AppDelegate.swift in Sources */,
+				481144DF2157A98A00BF56EF /* firstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +497,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = happy.450.mikumiku.money;
+				PRODUCT_BUNDLE_IDENTIFIER = happy.450.mikumiku.money99;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,7 +515,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = happy.450.mikumiku.money;
+				PRODUCT_BUNDLE_IDENTIFIER = happy.450.mikumiku.money99;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
