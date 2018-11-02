@@ -13,13 +13,14 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBOutlet var table: UITableView!
     var saveData : UserDefaults = UserDefaults.standard
     var keiyakuArray: [Dictionary<String,String>] = []
+    var selectedInfo : Int!
     
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cell = table.dequeueReusableCell(withIdentifier:"cell", for: IndexPath) as! ListTableViewCell
-        let nowIndexPathDictionary = keiyakuArray[IndexPath.row]
-        cell.listLabel.text = nowIndexPathDictonary[""]
+//        let cell = table.dequeueReusableCell(withIdentifier:"cell", for: IndexPath) as! ListTableViewCell
+//        let nowIndexPathDictionary = keiyakuArray[IndexPath.row]
+//        cell.listLabel.text = nowIndexPathDictonary[""]
         
 //        let object = objects[IndexPath.row] as! NSDate
 //        cell.textLabel!.text = object.description
@@ -52,18 +53,34 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) ->Int{
         return keiyakuArray.count
     }
+//tableViewのセルの数を指定
     
     
     func tableView(_ tableView : UITableView, cellForRowAt indexpath:IndexPath) -> UITableViewCell{
         let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexpath) as! ListTableViewCell
         let nowIndexPathDictionary = keiyakuArray[indexpath.row]
         cell.textLabel?.text = nowIndexPathDictionary["name"]
+// 一覧にでるのを名前にしてる
         return cell
     }
+//各セルの中身の表示の仕方設定
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       performSegue(withIdentifier: "toHenkyakuView", sender: nil)
+        selectedInfo = indexPath.row as Int
+        if selectedInfo != nil {
+            // SubViewController へ遷移するために Segue を呼び出す
+            performSegue(withIdentifier: "toHenkyakuView",sender: nil)
+        }
     }
+    
+    override func prepare (for segue:UIStoryboardSegue,sender : Any!){
+        if (segue.identifier == "toHenkyakuView"){
+            let  destinationVC: hemkyakuViewController = (segue.destination as? hemkyakuViewController)!
+        destinationVC.selectedInfo = selectedInfo
+        }
+    }
+    
+    
     
     @IBAction func add (){
         performSegue(withIdentifier: "toNyuryokuView", sender: nil)

@@ -18,6 +18,8 @@ class keiyakushoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var enLabel : UILabel!
     @IBOutlet var whyLabel : UILabel!
     
+    var selectedInfo : Int!
+    
     var userDefaults : UserDefaults = UserDefaults.standard
     var keiyakuArray: [Dictionary<String,String>] = []
     

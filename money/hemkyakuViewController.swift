@@ -19,6 +19,7 @@ class hemkyakuViewController: UIViewController {
     @IBOutlet var myButton : UIButton!
     @IBOutlet var sumiImageView : UIImageView!
     var doneNumber : String!
+    var selectedInfo : Int!
     
     var userDefaults : UserDefaults = UserDefaults.standard
     var keiyakuArray : [Dictionary<String,String>] = []
@@ -27,17 +28,27 @@ class hemkyakuViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
       
+        
         if userDefaults.array(forKey: "KEIYAKU") != nil{
             keiyakuArray = userDefaults.array(forKey: "KEIYAKU") as! [Dictionary<String, String>]
             
-            yearLabel.text = keiyakuArray[keiyakuArray.count - 1]["year"] as! String
-            monthLabel.text = keiyakuArray[keiyakuArray.count - 1]["month"] as! String
-            dayLabel.text = keiyakuArray[keiyakuArray.count - 1]["day"] as! String
-            nameLabel.text = keiyakuArray[keiyakuArray.count - 1]["name"] as! String
-            nameLabel2.text = keiyakuArray[keiyakuArray.count - 1]["name"] as! String
-            enLabel.text = keiyakuArray[keiyakuArray.count - 1]["en"] as! String
-            whyLabel.text = keiyakuArray[keiyakuArray.count - 1]["why"] as! String
-            doneNumber = keiyakuArray[keiyakuArray.count - 1]["done"] as! String
+//            yearLabel.text = keiyakuArray[selectedInfo - 1]["year"] as! String
+//            monthLabel.text = keiyakuArray[selectedInfo - 1]["month"] as! String
+//            dayLabel.text = keiyakuArray[selectedInfo - 1]["day"] as! String
+//            nameLabel.text = keiyakuArray[selectedInfo - 1]["name"] as! String
+//            nameLabel2.text = keiyakuArray[selectedInfo - 1]["name"] as! String
+//            enLabel.text = keiyakuArray[selectedInfo - 1]["en"] as! String
+//            whyLabel.text = keiyakuArray[selectedInfo - 1]["why"] as! String
+//            doneNumber = keiyakuArray[selectedInfo - 1]["done"] as! String
+            
+            yearLabel.text = keiyakuArray[selectedInfo - 1]["year"] as! String
+            monthLabel.text = keiyakuArray[selectedInfo - 1]["month"] as! String
+            dayLabel.text = keiyakuArray[selectedInfo - 1]["day"] as! String
+            nameLabel.text = keiyakuArray[selectedInfo - 1]["name"] as! String
+            nameLabel2.text = keiyakuArray[selectedInfo - 1]["name"] as! String
+            enLabel.text = keiyakuArray[selectedInfo - 1]["en"] as! String
+            whyLabel.text = keiyakuArray[selectedInfo - 1]["why"] as! String
+//            doneNumber = keiyakuArray[selectedInfo - 1]["done"] as! String
             
             print(keiyakuArray)
            
