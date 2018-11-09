@@ -17,6 +17,7 @@ class keiyakushoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var nameLabel2 : UILabel!
     @IBOutlet var enLabel : UILabel!
     @IBOutlet var whyLabel : UILabel!
+    var doneNumber : String!
     
     var selectedInfo : Int!
     
@@ -37,7 +38,7 @@ class keiyakushoViewController: UIViewController, UITextFieldDelegate {
             nameLabel2.text = keiyakuArray[keiyakuArray.count - 1]["name"] as! String
             enLabel.text = keiyakuArray[keiyakuArray.count - 1]["en"] as! String
             whyLabel.text = keiyakuArray[keiyakuArray.count - 1]["why"] as! String
-    
+//            doneNumber = keiyakuArray[keiyakuArray.count - 1]["number"] as! String
         }
         // Do any additional setup after loading the view.
         

@@ -19,12 +19,12 @@ class hemkyakuViewController: UIViewController {
     @IBOutlet var myButton : UIButton!
     @IBOutlet var sumiImageView : UIImageView!
     @IBOutlet var enImageView : UIImageView!
-    var doneNumber : Int!
-    var doneNumber2 : Int!
+    var doneNumber : String!
+//    var doneNumber2 : Int!
     var selectedInfo : Int!
     var saveData : UserDefaults = UserDefaults.standard
-    var saveData2 : UserDefaults = UserDefaults.standard
-    var saveData3 : UserDefaults = UserDefaults.standard
+//    var saveData2 : UserDefaults = UserDefaults.standard
+//    var saveData3 : UserDefaults = UserDefaults.standard
     var keiyakuArray : [Dictionary<String,String>] = []
     
     override func viewDidLoad() {
@@ -34,12 +34,12 @@ class hemkyakuViewController: UIViewController {
         
         if saveData.array(forKey: "KEIYAKU") != nil{
             keiyakuArray = saveData.array(forKey: "KEIYAKU") as! [Dictionary<String, String>]
-            if saveData2.array(forKey: "number") != nil{
-                doneNumber = saveData2.array(forKey: "number") as! Int
-            }
-            if saveData3.array(forKey: "number2") != nil{
-                doneNumber2 = saveData2.array(forKey: "number2") as! Int
-            }
+//            if saveData2.array(forKey: "number") != nil{
+//                doneNumber = saveData2.array(forKey: "number") as! Int
+//            }
+//            if saveData3.array(forKey: "number2") != nil{
+//                doneNumber2 = saveData2.array(forKey: "number2") as! Int
+//            }
             
 //            yearLabel.text = keiyakuArray[selectedInfo - 1]["year"] as! String
 //            monthLabel.text = keiyakuArray[selectedInfo - 1]["month"] as! String
@@ -57,18 +57,19 @@ class hemkyakuViewController: UIViewController {
             nameLabel2.text = keiyakuArray[selectedInfo]["name"] as! String
             enLabel.text = keiyakuArray[selectedInfo]["en"] as! String
             whyLabel.text = keiyakuArray[selectedInfo]["why"] as! String
-            //doneNumber = keiyakuArray[selectedInfo]["done"] as! String
+            doneNumber = keiyakuArray[selectedInfo]["number"] as! String
             
-            doneNumber = saveData2.object(forKey:"number") as! Int
-            doneNumber2 = saveData3.object(forKey:"number2") as! Int
+            doneNumber = "zero"
+//            doneNumber = saveData2.object(forKey:"number") as! Int
+//            doneNumber2 = saveData3.object(forKey:"number2") as! Int
             print(keiyakuArray)
            
             sumiImageView.isHidden = true
             
-            if doneNumber == 0{
+            if doneNumber == "zero"{
                 sumiImageView.isHidden = true
                 enImageView.isHidden = false
-            }else if doneNumber == 1{
+            }else if doneNumber == "ichi"{
                 sumiImageView.isHidden = false
                 enImageView.isHidden = true
                 myButton.isHidden = true
@@ -97,10 +98,13 @@ class hemkyakuViewController: UIViewController {
     @IBAction func henkyaku(){
         sumiImageView.isHidden = false
         enImageView.isHidden = true
-        doneNumber = 1
-        doneNumber2 = 1
-        saveData2.set(doneNumber,forKey: "number")
-        saveData3.set(doneNumber2,forKey:"number2")
+        doneNumber = "ichi"
+        saveData.set(keiyakuArray,forKey:"KEIYAKU")
+//        doneNumber2 = 1
+//        saveData2.set(doneNumber,forKey: "number")
+//        saveData3.set(doneNumber2,forKey:"number2")
+        print(doneNumber)
+//        print(doneNumber2)
         myButton.isHidden = true
         myButton.tintColor = UIColor.clear
         

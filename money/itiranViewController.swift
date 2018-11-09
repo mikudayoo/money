@@ -13,8 +13,8 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBOutlet var table: UITableView!
     var keiyakuArray: [Dictionary<String,String>] = []
     var selectedInfo : Int!
-    var doneNumber : Int = 0
-    var doneNumber2 : Int = 0
+    var doneNumber : String = "zero" 
+//    var doneNumber2 : Int = 0
     var saveData : UserDefaults = UserDefaults.standard
     var saveData2 : UserDefaults = UserDefaults.standard
     var saveData3 : UserDefaults = UserDefaults.standard
@@ -35,8 +35,8 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
         table.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         // Do any additional setup after loading the view.
         
-         saveData2.set(doneNumber,forKey:"number")
-         saveData3.set(doneNumber2,forKey:"number2")
+//         saveData2.set(doneNumber,forKey:"number")
+//         saveData3.set(doneNumber2,forKey:"number2")
         
     }
 
