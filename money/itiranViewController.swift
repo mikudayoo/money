@@ -11,10 +11,14 @@ import UIKit
 class itiranViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var table: UITableView!
-    var saveData : UserDefaults = UserDefaults.standard
     var keiyakuArray: [Dictionary<String,String>] = []
     var selectedInfo : Int!
-    
+    var doneNumber : Int = 0
+    var doneNumber2 : Int = 0
+    var saveData : UserDefaults = UserDefaults.standard
+    var saveData2 : UserDefaults = UserDefaults.standard
+    var saveData3 : UserDefaults = UserDefaults.standard
+
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +34,10 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
         table.delegate = self
         table.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         // Do any additional setup after loading the view.
+        
+         saveData2.set(doneNumber,forKey:"number")
+         saveData3.set(doneNumber2,forKey:"number2")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +80,15 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
             performSegue(withIdentifier: "toHenkyakuView",sender: nil)
         }
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            keiyakuArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            saveData.set(keiyakuArray,forKey:"KEIYAKU")
+        }
+    }
+// これはスライドしたらdelegateできる　ネットからコピペしたけどsaveDataの描き忘れに注意
     
     override func prepare (for segue:UIStoryboardSegue,sender : Any!){
         if (segue.identifier == "toHenkyakuView"){

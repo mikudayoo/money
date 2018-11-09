@@ -52,7 +52,7 @@ class keiyakushoViewController: UIViewController, UITextFieldDelegate {
     
     // スクショするため
     @IBAction func photo(){
-        let rect : CGRect = CGRect(x: 16, y: 110, width: 343, height: 546)
+        let rect : CGRect = CGRect(x: 16, y: 170, width: 343, height: 546)
         UIGraphicsBeginImageContext(rect.size)
         self.view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let capture = UIGraphicsGetImageFromCurrentImageContext()

@@ -18,11 +18,11 @@ class nyuryokuViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var whyTextField : UITextField!
     
     var saveData : UserDefaults = UserDefaults.standard
+//    var saveData2 : UserDefaults = UserDefaults.standard
     
     var keiyakuArray: [Dictionary<String, String>] = []
     
-    var doneNumber : String = "zero"
-
+//    var doneNumber : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,12 +53,12 @@ class nyuryokuViewController: UIViewController, UITextFieldDelegate{
                                  "name": nameTextField.text!,
                                  "en": enTextField.text!,
                                  "why": whyTextField.text!,
-                                 "done":doneNumber
                                 ]
         
         keiyakuArray.append(keiyakuDictionary)
         
         saveData.set(keiyakuArray, forKey: "KEIYAKU")
+//        saveData2.set(doneNumber,forKey:"number")
         
         dayTextField.text = ""
         monthTextField.text = ""

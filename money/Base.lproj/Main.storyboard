@@ -500,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXE-uV-IdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2078" y="151"/>
+            <point key="canvasLocation" x="2077.5999999999999" y="150.73891625615764"/>
         </scene>
         <!--Hemkyaku View Controller-->
         <scene sceneID="i98-dY-aKb">
@@ -590,17 +590,6 @@
                                     <action selector="back" destination="vU4-8O-iD3" eventType="touchUpInside" id="l0a-Ps-tho"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzT-Uw-NHO">
-                                <rect key="frame" x="108" y="62" width="159" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="uzura_font" family="uzura_font" pointSize="61"/>
-                                <state key="normal" title="済">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="henkyaku" destination="vU4-8O-iD3" eventType="touchUpInside" id="JTr-dR-uqY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5O-Ls-9hx">
                                 <rect key="frame" x="284" y="56" width="91" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -685,12 +674,24 @@
                                 <rect key="frame" x="16" y="277" width="343" height="343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzT-Uw-NHO">
+                                <rect key="frame" x="107" y="65" width="159" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="uzura_font" family="uzura_font" pointSize="61"/>
+                                <state key="normal" title="済">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="henkyaku" destination="vU4-8O-iD3" eventType="touchUpInside" id="JTr-dR-uqY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mbr-5E-LE1"/>
                     </view>
                     <connections>
                         <outlet property="dayLabel" destination="897-qm-p4O" id="3eY-sC-8hG"/>
+                        <outlet property="enImageView" destination="3v6-FP-iRc" id="tOJ-8T-PSW"/>
                         <outlet property="enLabel" destination="dBO-dt-iyY" id="gbd-tk-ElM"/>
                         <outlet property="monthLabel" destination="dNA-C2-K08" id="zg6-NP-rhQ"/>
                         <outlet property="myButton" destination="SzT-Uw-NHO" id="bb2-KV-aHg"/>
