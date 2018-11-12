@@ -17,19 +17,19 @@ class keiyakushoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var nameLabel2 : UILabel!
     @IBOutlet var enLabel : UILabel!
     @IBOutlet var whyLabel : UILabel!
-    var doneNumber : String!
+//    var doneNumber : String!
     
-    var selectedInfo : Int!
+//    var selectedInfo : Int!
     
-    var userDefaults : UserDefaults = UserDefaults.standard
+    var saveData : UserDefaults = UserDefaults.standard
     var keiyakuArray: [Dictionary<String,String>] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        if userDefaults.array(forKey: "KEIYAKU") != nil{
-            keiyakuArray = userDefaults.array(forKey: "KEIYAKU") as! [Dictionary<String, String>]
+        if saveData.array(forKey: "KEIYAKU") != nil{
+            keiyakuArray = saveData.array(forKey: "KEIYAKU") as! [Dictionary<String, String>]
            
             yearLabel.text = keiyakuArray[keiyakuArray.count - 1]["year"] as! String
             monthLabel.text = keiyakuArray[keiyakuArray.count - 1]["month"] as! String

@@ -59,17 +59,17 @@ class hemkyakuViewController: UIViewController {
             whyLabel.text = keiyakuArray[selectedInfo]["why"] as! String
             doneNumber = keiyakuArray[selectedInfo]["number"] as! String
             
-            doneNumber = "zero"
+//            doneNumber2 = 0
 //            doneNumber = saveData2.object(forKey:"number") as! Int
 //            doneNumber2 = saveData3.object(forKey:"number2") as! Int
             print(keiyakuArray)
            
             sumiImageView.isHidden = true
             
-            if doneNumber == "zero"{
+            if doneNumber == "0"{
                 sumiImageView.isHidden = true
                 enImageView.isHidden = false
-            }else if doneNumber == "ichi"{
+            }else if doneNumber == "1"{
                 sumiImageView.isHidden = false
                 enImageView.isHidden = true
                 myButton.isHidden = true
@@ -98,7 +98,7 @@ class hemkyakuViewController: UIViewController {
     @IBAction func henkyaku(){
         sumiImageView.isHidden = false
         enImageView.isHidden = true
-        doneNumber = "ichi"
+        doneNumber = "1"
         saveData.set(keiyakuArray,forKey:"KEIYAKU")
 //        doneNumber2 = 1
 //        saveData2.set(doneNumber,forKey: "number")
