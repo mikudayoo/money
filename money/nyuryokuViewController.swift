@@ -16,7 +16,7 @@ class nyuryokuViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var nameTextField : UITextField!
     @IBOutlet var enTextField : UITextField!
     @IBOutlet var whyTextField : UITextField!
-    var doneNumber : String = "zero"
+    var doneNumber : String!
 //    var doneNumber2 : Int = 0
     var saveData : UserDefaults = UserDefaults.standard
 //    var saveData2 : UserDefaults = UserDefaults.standard
@@ -34,7 +34,9 @@ class nyuryokuViewController: UIViewController, UITextFieldDelegate{
         whyTextField.delegate = self
 //delegateはmainstorybordで繋いである
 
-        keiyakuArray = saveData.array(forKey: "KEIYAKU") as! [Dictionary<String, String>]
+        
+        if saveData.array(forKey: "KEIYAKU") != nil{
+            keiyakuArray = saveData.array(forKey: "KEIYAKU") as! [Dictionary<String, String>]}
         //keiyakuArray = saveData.object (forKey: "KEIYAKU") as! [Dictionary<String, String>]
         // Do any additional setup after loading the view.
     }

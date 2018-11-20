@@ -63,6 +63,7 @@ class hemkyakuViewController: UIViewController {
 //            doneNumber = saveData2.object(forKey:"number") as! Int
 //            doneNumber2 = saveData3.object(forKey:"number2") as! Int
             print(keiyakuArray)
+            print("test")
            
             sumiImageView.isHidden = true
             
@@ -93,17 +94,19 @@ class hemkyakuViewController: UIViewController {
     }
     @IBAction func back (){
         self.dismiss(animated: true, completion: nil)
+        print(doneNumber)
     }
     
     @IBAction func henkyaku(){
         sumiImageView.isHidden = false
         enImageView.isHidden = true
         doneNumber = "1"
-        saveData.set(keiyakuArray,forKey:"KEIYAKU")
+        keiyakuArray.updateValue(doneNumber,forKey:"number")
 //        doneNumber2 = 1
 //        saveData2.set(doneNumber,forKey: "number")
 //        saveData3.set(doneNumber2,forKey:"number2")
         print(doneNumber)
+        print(keiyakuArray)
 //        print(doneNumber2)
         myButton.isHidden = true
         myButton.tintColor = UIColor.clear
