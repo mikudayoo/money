@@ -101,7 +101,8 @@ class hemkyakuViewController: UIViewController {
         sumiImageView.isHidden = false
         enImageView.isHidden = true
         doneNumber = "1"
-        keiyakuArray.updateValue(doneNumber,forKey:"number")
+//        keiyakuArray[selectedInfo]["number"] = "1"
+        keiyakuArray[selectedInfo].updateValue("1", forKey: "number")
 //        doneNumber2 = 1
 //        saveData2.set(doneNumber,forKey: "number")
 //        saveData3.set(doneNumber2,forKey:"number2")
