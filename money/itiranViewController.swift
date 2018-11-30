@@ -15,10 +15,10 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
     var selectedInfo : Int!
 //    var doneNumber : String = "zero" 
 //    var doneNumber2 : Int = 0
+    var doneNumber : String!
     var saveData : UserDefaults = UserDefaults.standard
     var saveData2 : UserDefaults = UserDefaults.standard
     var saveData3 : UserDefaults = UserDefaults.standard
-
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
 //         saveData2.set(doneNumber,forKey:"number")
 //         saveData3.set(doneNumber2,forKey:"number2")
         
-        
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +69,9 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
         let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexpath) as! ListTableViewCell
         let nowIndexPathDictionary = keiyakuArray[indexpath.row]
         cell.textLabel?.text = nowIndexPathDictionary["name"]
+        doneNumber = nowIndexPathDictionary["number"]
+        
+
 // 一覧にでるのを名前にしてる
         return cell
     }

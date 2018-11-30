@@ -28,6 +28,8 @@
 		48A1308821560CD700FB5296 /* keiyakushoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A1308721560CD700FB5296 /* keiyakushoViewController.swift */; };
 		48A130922156285600FB5296 /* itiranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A130912156285600FB5296 /* itiranViewController.swift */; };
 		48A1309421571FB500FB5296 /* keiyakusho.png in Resources */ = {isa = PBXBuildFile; fileRef = 48A1309321571FB500FB5296 /* keiyakusho.png */; };
+		48CADF7A21A80F4B00A3DD51 /* finishedred.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CADF7921A80F4B00A3DD51 /* finishedred.png */; };
+		48CADF7C21A80FA900A3DD51 /* sumigreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CADF7B21A80FA900A3DD51 /* sumigreen.png */; };
 		48E919AE2157388D0012EC29 /* endmiku.png in Resources */ = {isa = PBXBuildFile; fileRef = 48E919AD2157388C0012EC29 /* endmiku.png */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		48A1308721560CD700FB5296 /* keiyakushoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keiyakushoViewController.swift; sourceTree = "<group>"; };
 		48A130912156285600FB5296 /* itiranViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itiranViewController.swift; sourceTree = "<group>"; };
 		48A1309321571FB500FB5296 /* keiyakusho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keiyakusho.png; sourceTree = "<group>"; };
+		48CADF7921A80F4B00A3DD51 /* finishedred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finishedred.png; sourceTree = "<group>"; };
+		48CADF7B21A80FA900A3DD51 /* sumigreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sumigreen.png; sourceTree = "<group>"; };
 		48E919AD2157388C0012EC29 /* endmiku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endmiku.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,8 @@
 		48A130562156077600FB5296 /* money */ = {
 			isa = PBXGroup;
 			children = (
+				48CADF7B21A80FA900A3DD51 /* sumigreen.png */,
+				48CADF7921A80F4B00A3DD51 /* finishedred.png */,
 				481144F0215888A800BF56EF /* maru.png */,
 				481144EE215872CC00BF56EF /* yukichi3.png */,
 				481144EA2157D3EF00BF56EF /* uzura.ttf */,
@@ -281,12 +287,14 @@
 				48E919AE2157388D0012EC29 /* endmiku.png in Resources */,
 				48A1309421571FB500FB5296 /* keiyakusho.png in Resources */,
 				481144DD2157A8CF00BF56EF /* yukichi.png in Resources */,
+				48CADF7A21A80F4B00A3DD51 /* finishedred.png in Resources */,
 				48A1305F2156077B00FB5296 /* Assets.xcassets in Resources */,
 				48A1305D2156077700FB5296 /* Main.storyboard in Resources */,
 				481144F1215888A800BF56EF /* maru.png in Resources */,
 				481144E12157BCAD00BF56EF /* en.png in Resources */,
 				481144E72157CD0700BF56EF /* camera.png in Resources */,
 				481144EF215872CC00BF56EF /* yukichi3.png in Resources */,
+				48CADF7C21A80FA900A3DD51 /* sumigreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
