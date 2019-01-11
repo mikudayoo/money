@@ -32,7 +32,8 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
         
         table.dataSource = self
         table.delegate = self
-        table.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        table.register(UINib(nibName: "ListTableViewCell2", bundle: nil), forCellReuseIdentifier: "cell2")
+        
         // Do any additional setup after loading the view.
         
 //         saveData2.set(doneNumber,forKey:"number")
@@ -55,7 +56,7 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
 
     }
     
-    func numberOfSections(in ListTableView: UITableView) -> Int {
+    func numberOfSections(in ListTableView2: UITableView) -> Int {
         return 1
     }
     
@@ -66,13 +67,25 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     
     func tableView(_ tableView : UITableView, cellForRowAt indexpath:IndexPath) -> UITableViewCell{
-        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexpath) as! ListTableViewCell
+        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell2", for:indexpath) as! ListTableViewCell2
         let nowIndexPathDictionary = keiyakuArray[indexpath.row]
         cell.textLabel?.text = nowIndexPathDictionary["name"]
+        if nowIndexPathDictionary["number"] == "0" {
+            cell.imageView?.image = UIImage(named:"sumigreen")
+            print("未マークここに来ました！！！")
+            print(nowIndexPathDictionary)
+            print(indexpath)
+        } else if nowIndexPathDictionary["number"] == "1" {
+            cell.imageView?.image = UIImage(named:"finishedred")
+            print("済マークここに来ました！")
+            print(nowIndexPathDictionary)
+        }else{
+            print("未がない")
+        }
         doneNumber = nowIndexPathDictionary["number"]
         
 
-// 一覧にでるのを名前にしてる
+        // 一覧にでるのを名前にしてる
         return cell
     }
 //各セルの中身の表示の仕方設定
@@ -85,7 +98,7 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
         }
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             keiyakuArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)

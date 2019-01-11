@@ -59,6 +59,9 @@ class keiyakushoViewController: UIViewController, UITextFieldDelegate {
         let capture = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         UIImageWriteToSavedPhotosAlbum(capture!, nil, nil,nil)
+        let alert = UIAlertController(title:"完了",message:"スクリーンショットが完了しました",preferredStyle:.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default ))
+        present(alert,animated:true,completion: nil)
     }
     
     
