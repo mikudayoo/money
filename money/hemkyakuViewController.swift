@@ -50,14 +50,14 @@ class hemkyakuViewController: UIViewController {
 //            whyLabel.text = keiyakuArray[selectedInfo - 1]["why"] as! String
 //            doneNumber = keiyakuArray[selectedInfo - 1]["done"] as! String
             
-            yearLabel.text = keiyakuArray[selectedInfo]["year"] as! String
-            monthLabel.text = keiyakuArray[selectedInfo]["month"] as! String
-            dayLabel.text = keiyakuArray[selectedInfo]["day"] as! String
-            nameLabel.text = keiyakuArray[selectedInfo]["name"] as! String
-            nameLabel2.text = keiyakuArray[selectedInfo]["name"] as! String
-            enLabel.text = keiyakuArray[selectedInfo]["en"] as! String
-            whyLabel.text = keiyakuArray[selectedInfo]["why"] as! String
-            doneNumber = keiyakuArray[selectedInfo]["number"] as! String
+            yearLabel.text = keiyakuArray[selectedInfo]["year"]
+            monthLabel.text = keiyakuArray[selectedInfo]["month"]
+            dayLabel.text = keiyakuArray[selectedInfo]["day"]
+            nameLabel.text = keiyakuArray[selectedInfo]["name"]
+            nameLabel2.text = keiyakuArray[selectedInfo]["name"]
+            enLabel.text = keiyakuArray[selectedInfo]["en"]
+            whyLabel.text = keiyakuArray[selectedInfo]["why"]
+            doneNumber = keiyakuArray[selectedInfo]["number"]
             
 //            doneNumber2 = 0
 //            doneNumber = saveData2.object(forKey:"number") as! Int
@@ -84,17 +84,17 @@ class hemkyakuViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func photo(){
-        let rect : CGRect = CGRect(x: 170, y: 16, width: 343, height: 546)
-        UIGraphicsBeginImageContext(rect.size)
-        self.view.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let capture = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        UIImageWriteToSavedPhotosAlbum(capture!, nil, nil,nil)
-        let alert = UIAlertController(title:"完了",message:"スクリーンショットが完了しました",preferredStyle:.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default ))
-        present(alert,animated:true,completion: nil)
-    }
+//    @IBAction func photo(){
+//        let rect : CGRect = CGRect(x: 0, y: 0, width: 343, height: 546)
+//        UIGraphicsBeginImageContext(rect.size)
+//        self.view.layer.render(in: UIGraphicsGetCurrentContext()!)
+//        let capture = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        UIImageWriteToSavedPhotosAlbum(capture!, nil, nil,nil)
+//        let alert = UIAlertController(title:"完了",message:"スクリーンショットが完了しました",preferredStyle:.alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: .default ))
+//        present(alert,animated:true,completion: nil)
+//    }
     @IBAction func back (){
         self.dismiss(animated: true, completion: nil)
         print(doneNumber)
@@ -119,6 +119,46 @@ class hemkyakuViewController: UIViewController {
 //        userDefaults.set(doneNumber , forKey:"done")
 //        userDefaults.set(keiyakuArray, forKey: "KEIYAKU")
 //        userDefaults.removeObject(forKey:"done")
+    }
+    func getScreenShot(windowFrame: CGRect) -> UIImage {
+        
+        UIGraphicsBeginImageContextWithOptions(windowFrame.size, false, 0.0)
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        self.view.layer.render(in: context)
+        let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return capturedImage
+    }
+    
+    @IBAction func addScreenShot(_ sender: Any) {
+        let image = getScreenShot(windowFrame: self.view.bounds)
+        let alert = UIAlertController(title:"完了",message:"スクリーンショットが完了しました",preferredStyle:.alert)
+        let cropping = image.cropping(to: CGRect(x: 16, y: 170, width: 343, height: 546))
+        UIImageWriteToSavedPhotosAlbum(cropping!, nil, nil, nil)
+        alert.addAction(UIAlertAction(title: "OK", style: .default ))
+        present(alert,animated:true,completion: nil)
+       
+    }
+}
+
+extension UIImage {
+    func cropping(to: CGRect) -> UIImage? {
+        var opaque = false
+        if let cgImage = cgImage {
+            switch cgImage.alphaInfo {
+            case .noneSkipLast, .noneSkipFirst:
+                opaque = true
+            default:
+                break
+            }
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(to.size, opaque, scale)
+        draw(at: CGPoint(x: -to.origin.x, y: -to.origin.y))
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return result
     }
 }
 

@@ -31,13 +31,13 @@ class keiyakushoViewController: UIViewController, UITextFieldDelegate {
         if saveData.array(forKey: "KEIYAKU") != nil{
             keiyakuArray = saveData.array(forKey: "KEIYAKU") as! [Dictionary<String, String>]
            
-            yearLabel.text = keiyakuArray[keiyakuArray.count - 1]["year"] as! String
-            monthLabel.text = keiyakuArray[keiyakuArray.count - 1]["month"] as! String
-            dayLabel.text = keiyakuArray[keiyakuArray.count - 1]["day"] as! String
-            nameLabel.text = keiyakuArray[keiyakuArray.count - 1]["name"] as! String
-            nameLabel2.text = keiyakuArray[keiyakuArray.count - 1]["name"] as! String
-            enLabel.text = keiyakuArray[keiyakuArray.count - 1]["en"] as! String
-            whyLabel.text = keiyakuArray[keiyakuArray.count - 1]["why"] as! String
+            yearLabel.text = keiyakuArray[keiyakuArray.count - 1]["year"]
+            monthLabel.text = keiyakuArray[keiyakuArray.count - 1]["month"]
+            dayLabel.text = keiyakuArray[keiyakuArray.count - 1]["day"]
+            nameLabel.text = keiyakuArray[keiyakuArray.count - 1]["name"]
+            nameLabel2.text = keiyakuArray[keiyakuArray.count - 1]["name"]
+            enLabel.text = keiyakuArray[keiyakuArray.count - 1]["en"]
+            whyLabel.text = keiyakuArray[keiyakuArray.count - 1]["why"] 
 //            doneNumber = keiyakuArray[keiyakuArray.count - 1]["number"] as! String
         }
         // Do any additional setup after loading the view.

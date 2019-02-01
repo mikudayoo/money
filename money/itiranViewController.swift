@@ -67,16 +67,16 @@ class itiranViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     
     func tableView(_ tableView : UITableView, cellForRowAt indexpath:IndexPath) -> UITableViewCell{
-        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell2", for:indexpath) as! ListTableViewCell2
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for:indexpath) as! ListTableViewCell2
         let nowIndexPathDictionary = keiyakuArray[indexpath.row]
-        cell.textLabel?.text = nowIndexPathDictionary["name"]
+        cell.listLabel.text = nowIndexPathDictionary["name"]
         if nowIndexPathDictionary["number"] == "0" {
-            cell.imageView?.image = UIImage(named:"sumigreen")
+            cell.sumiImageView.image = UIImage(named:"sumigreen")
             print("未マークここに来ました！！！")
             print(nowIndexPathDictionary)
             print(indexpath)
         } else if nowIndexPathDictionary["number"] == "1" {
-            cell.imageView?.image = UIImage(named:"finishedred")
+            cell.sumiImageView.image = UIImage(named:"finishedred")
             print("済マークここに来ました！")
             print(nowIndexPathDictionary)
         }else{
